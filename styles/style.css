@@ -56,25 +56,24 @@ ol {
 .content {
   display: flex;
   flex-direction: row;
-  align-items: end;
   margin-left: auto;
   margin-right: auto;
   gap: 30px;
   padding: 133px 30px;
-
-
 }
 
 .result {
   display: flex;
   flex-direction: column;
+  gap: 16px;
+  padding-top: 78px;
 }
 
 .result__video-container {
   position: relative;
   width: 711px;
   height: 386px;
-  margin-bottom: 16px;
+
 }
 
 .result__video {
@@ -93,6 +92,9 @@ ol {
 }
 
 .search-form__fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
   width: -moz-fit-content;
   width: fit-content;
   border: none;
@@ -189,14 +191,14 @@ ol {
 }
 
 .search-form__submit-button {
+  font-family: Fira Sans Condensed;
   align-self: flex-end;
   width: 194px;
   height: 34px;
 }
 
 .content__details {
-  width: 399%;
-  height: 100%;
+  weight: 100%;
 }
 
 .title {
