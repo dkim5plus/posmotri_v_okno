@@ -73,7 +73,6 @@ ol {
   position: relative;
   width: 711px;
   height: 386px;
-
 }
 
 .result__video {
@@ -88,7 +87,6 @@ ol {
   flex-direction: row;
   align-items: start;
   justify-content: space-between;
-
 }
 
 .search-form__fieldset {
@@ -103,7 +101,6 @@ ol {
 .search-form__fieldset-title {
   font-size: 18px;
   font-weight: 400;
-
 }
 
 .search-form__label {
@@ -187,7 +184,6 @@ ol {
   font-weight: 700px;
   font-style: normal;
   text-align: center;
-
 }
 
 .button:focus {
@@ -228,7 +224,6 @@ ol {
 
 .content__accent {
   color: var(--metal)
-
 }
 
 .content__list {
@@ -285,8 +280,6 @@ ol {
   align-items: start;
   justify-content: space-between;
   height: 107px;
-
-
 }
 
 .content__video-card-description-container {
@@ -299,8 +292,6 @@ ol {
   font-weight: 700;
   text-transform: uppercase;
   line-height: 100%;
-
-  
 }
 
 .content__video-card-description {
