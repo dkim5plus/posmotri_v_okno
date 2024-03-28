@@ -5,9 +5,8 @@
 }
 
 :root {
-  --white: #fff;
-  --black: #000;
-  --metal: #545050;
+  --main-color: #fff;
+  --back-color: #545050;
 }
 
 .visually-hidden {
@@ -25,10 +24,13 @@ html {
 }
 
 .page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
   inline-size: 1200px;
   block-size: 100%;
-  margin: auto;
-  color: #fff;
+  color: var(--main-color);
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
@@ -55,23 +57,21 @@ ol {
 
 .content {
   display: flex;
-  flex-direction: row;
-  margin-left: auto;
-  margin-right: auto;
+  justify-content: center;
+  align-items: end;
+  width: 1140px;
   gap: 30px;
-  padding: 133px 30px;
 }
 
 .result {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  padding-top: 78px;
 }
 
 .result__video-container {
   position: relative;
-  width: 711px;
+  inline-size: 711px;
   height: 386px;
 }
 
@@ -111,6 +111,10 @@ ol {
 .search-form__label:has(:focus-visible) {
   outline: 1px solid #fff;
   outline-offset: 2px;
+}
+
+.search-form__label:has(:focus) {
+  outline: 0;
 }
 
 .search-form__label:hover .search-form__label-text {
@@ -175,11 +179,11 @@ ol {
 }
 
 .button {
-  font-family: Fira Sans Condensed;
+  font-family: "Fira Sans Condensed";
   cursor: pointer;
-  border: 1px solid var(--white);
+  border: 1px solid var(--main-color);
   background-color: transparent;
-  color: var(--white);
+  color: var(--main-color);
   font-size: 18px;
   font-weight: 700px;
   font-style: normal;
@@ -191,12 +195,12 @@ ol {
 }
 
 .button:focus-visible {
-  outline: 1px solid var(--white);
+  outline: 1px solid var(--main-color);
   outline-offset: 2px;
 }
 
 .button:active {
-  background-color: var(--metal);
+  background-color: var(--back-color);
 }
 
 .button:hover {
@@ -210,7 +214,7 @@ ol {
 }
 
 .content__details {
-  weight: 100%;
+  width: 100%;
 }
 
 .title {
@@ -223,17 +227,13 @@ ol {
 }
 
 .content__accent {
-  color: var(--metal)
+  color: var(--back-color)
 }
 
 .content__list {
   position: relative;
   height: 298px;
-  overflow: hidden scroll;
-}
-
-.content__list::-webkit-scrollbar {
-  display: none;
+  overflow: auto;
 }
 
 /* ТЕМПЫ */
@@ -244,18 +244,18 @@ ol {
 }
 
 .content__list-item:not(:last-child) {
-  margin-bottom: 30px;
+  margin-block-end: 30px;
 }
 
 .content__card-link {
   display: block;
   text-decoration: none;
-  color: var(--white);
+  color: var(--main-color);
   margin: 2px
 }
 
 .content__card-link_current {
-  background-color: var(--metal);
+  background-color: var(--back-color);
 }
 
 .content__card-link:focus {
@@ -263,11 +263,11 @@ ol {
 }
 
 .content__card-link:focus-visible {
-  outline: 1px solid var(--white);
+  outline: 1px solid var(--main-color);
 }
 
 .content__card-link:active {
-  background: var(--metal);
+  background-color: var(--back-color);
 }
 
 .content__card-link:hover {
@@ -279,7 +279,6 @@ ol {
   flex-direction: row;
   align-items: start;
   justify-content: space-between;
-  height: 107px;
 }
 
 .content__video-card-description-container {
@@ -311,19 +310,4 @@ ol {
   text-align: center;
   inline-size: 100%;
   height: 34px;
-}
-
-.error {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.error__title {
-  font-family: Oswald, sans-serif;
-  font-size: 30px;
-  font-weight: 400;
-  line-height: 33px;
-  text-align: center;
-  text-transform: uppercase;
 }
