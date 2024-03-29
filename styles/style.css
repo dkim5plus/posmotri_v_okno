@@ -179,7 +179,7 @@ ol {
 }
 
 .button {
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed", sans-serif;
   cursor: pointer;
   border: 1px solid var(--main-color);
   background-color: transparent;
@@ -238,11 +238,6 @@ ol {
 
 /* ТЕМПЫ */
 
-.cards-list-item-template {
-  display: flex;
-  flex-direction: column;
-}
-
 .content__list-item:not(:last-child) {
   margin-block-end: 30px;
 }
@@ -291,6 +286,10 @@ ol {
   font-weight: 700;
   text-transform: uppercase;
   line-height: 100%;
+  text-overflow: ellipsis;   
+  white-space: nowrap;   
+  overflow: hidden;
+  inline-size: 200px;
 }
 
 .content__video-card-description {
